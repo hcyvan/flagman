@@ -1,8 +1,8 @@
-from flask_script import Manager, Command
 from flask_migrate import Migrate, MigrateCommand
+from flask_script import Manager, Command
 
-from app import app
-from db import db, User
+from db import db
+from kernel.app import app
 
 manager = Manager(app)
 migrate = Migrate(app, db)
