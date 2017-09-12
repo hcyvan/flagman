@@ -5,6 +5,28 @@ from kernel.app import app
 db = SQLAlchemy(app)
 
 
-class User(db.Model):
+class BaseModel(db.Model):
+    __abstract__ = True
+    create_at = db.Column(db.DateTime)
+    update_at = db.Column(db.DateTime)
+    delete_at = db.Column(db.DateTime)
+
+
+class User(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(128))
+    nickname = db.Column(db.String(48), index=True)
+    phone = db.Column(db.String(48), index=True)
+    password = db.Column(db.String(48), index=True)
+    salt = db.Column(db.String(48))
+    sex = db.Column(db.SmallInteger)
+
+
+class Flag(BaseModel):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(256))
+    content = db.Column(db.Text())
+    address = db.Column(db.String(256))
+    people_number = db.Column(db.Integer)
+    start_time = db.Column(db.DateTime)
+    lat = db.Column(db.Integer)
+    lng = db.Column(db.Integer)
