@@ -17,8 +17,7 @@ class User(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(48), index=True)
     phone = db.Column(db.String(48), index=True)
-    password = db.Column(db.String(48), index=True)
-    salt = db.Column(db.String(48))
+    password_hash = db.Column(db.String(128), index=True)
     sex = db.Column(db.SmallInteger)
 
 

@@ -16,9 +16,6 @@ class Hello(Command):
     def run(self):
         print("hello world")
 
-
-print(app.url_map)
-
 manager.add_command('hello', Hello())
 manager.add_command('db', MigrateCommand)
 
