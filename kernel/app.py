@@ -8,3 +8,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://palm:Palmtech001@127.0.
 
 sys.path.append(os.path.join(_root_path, 'http'))
 sys.path.append(os.path.join(_root_path, 'kernel'))
+
+from  routes import api
+

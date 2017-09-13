@@ -1,3 +1,3 @@
 from kernel import route
 
-route.Route.get('/tt', 'User@test')
+route.Route.post('/register', 'User@register')

@@ -1,3 +1,4 @@
+import datetime
 from flask_sqlalchemy import SQLAlchemy
 
 from kernel.app import app
@@ -7,8 +8,8 @@ db = SQLAlchemy(app)
 
 class BaseModel(db.Model):
     __abstract__ = True
-    create_at = db.Column(db.DateTime)
-    update_at = db.Column(db.DateTime)
+    create_at = db.Column(db.DateTime, default=datetime.datetime.utcnow)
+    update_at = db.Column(db.DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
     delete_at = db.Column(db.DateTime)
 
 

@@ -1,6 +1,9 @@
-class User:
-    def __init__(self):
-        pass
+from kernel.controller import Controller
+from repo.user import UserRepo
 
-    def test(self):
-        return 'python laravel'
+
+class User(Controller):
+    def register(self):
+        nickname = self.json('nickname')
+        UserRepo().register(nickname)
+        return self.json('nickname')
