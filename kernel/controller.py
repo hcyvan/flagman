@@ -13,7 +13,7 @@ class Controller:
         return self.request.json.get(key, default)
 
     @staticmethod
-    def echo(data=None, code=0, message='', status=None):
+    def echo(code=0, data=None, message='', status=None):
         result = {'code': code}
         if data:
             result['data'] = data

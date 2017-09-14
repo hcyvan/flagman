@@ -1,0 +1,26 @@
+[
+  {
+    "code": 0,
+    "msg": "Success"
+  },
+  {
+    "code": 1,
+    "msg": "Fail"
+  },
+  {
+    "code": 101,
+    "msg": "The phone is used"
+  },
+  {
+    "code": 102,
+    "msg": "The nickname is used"
+  },
+  {
+    "code": 103,
+    "msg": "The phone is not exist"
+  },
+  {
+    "code": 104,
+    "msg": "Wrong password"
+  }
+]

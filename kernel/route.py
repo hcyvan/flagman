@@ -21,28 +21,26 @@ def auto_import(func):
     return update_wrapper(wrapper, func)
 
 
-class Route:
-    @staticmethod
-    @auto_import
-    def get(path, controller):
-        app.add_url_rule(path, view_func=controller, methods=['GET'])
+@auto_import
+def get(path, controller):
+    app.add_url_rule(path, view_func=controller, methods=['GET'])
 
-    @staticmethod
-    @auto_import
-    def post(path, controller):
-        app.add_url_rule(path, view_func=controller, methods=['POST'])
 
-    @staticmethod
-    @auto_import
-    def delete(path, controller):
-        app.add_url_rule(path, view_func=controller, methods=['DELETE'])
+@auto_import
+def post(path, controller):
+    app.add_url_rule(path, view_func=controller, methods=['POST'])
 
-    @staticmethod
-    @auto_import
-    def patch(path, controller):
-        app.add_url_rule(path, view_func=controller, methods=['PATCH'])
 
-    @staticmethod
-    @auto_import
-    def put(path, controller):
-        app.add_url_rule(path, view_func=controller, methods=['PUT'])
+@auto_import
+def delete(path, controller):
+    app.add_url_rule(path, view_func=controller, methods=['DELETE'])
+
+
+@auto_import
+def patch(path, controller):
+    app.add_url_rule(path, view_func=controller, methods=['PATCH'])
+
+
+@auto_import
+def put(path, controller):
+    app.add_url_rule(path, view_func=controller, methods=['PUT'])
