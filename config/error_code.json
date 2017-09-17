@@ -1,26 +1,15 @@
 [
-  {
-    "code": 0,
-    "msg": "Success"
-  },
-  {
-    "code": 1,
-    "msg": "Fail"
-  },
-  {
-    "code": 101,
-    "msg": "The phone is used"
-  },
-  {
-    "code": 102,
-    "msg": "The nickname is used"
-  },
-  {
-    "code": 103,
-    "msg": "The phone is not exist"
-  },
-  {
-    "code": 104,
-    "msg": "Wrong password"
-  }
+  {"code": 0, "msg": "Success"},
+  {"code": 1, "msg": "Fail"},
+  {"code": 101, "msg": "The phone is used"},
+  {"code": 102, "msg": "The nickname is used"},
+  {"code": 103, "msg": "The phone is not exist"},
+  {"code": 104, "msg": "Wrong password"},
+  {"code": 201, "msg": "Flag title can't be empty"},
+  {"code": 202, "msg": "Flag content can't be empty"},
+  {"code": 203, "msg": "Flag address can't be empty"},
+  {"code": 204, "msg": "Flag people_number can't be empty"},
+  {"code": 205, "msg": "Flag start_time can't be empty"},
+  {"code": 206, "msg": "Flag lat can't be empty"},
+  {"code": 207, "msg": "Flag lng can't be empty"}
 ]

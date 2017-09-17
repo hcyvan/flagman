@@ -2,7 +2,7 @@ from model.db import User, db
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-def add(nickname, phone, password):
+def create(nickname, phone, password):
     password_hash = generate_password_hash(password)
     user = {
         "nickname": nickname,
@@ -11,6 +11,7 @@ def add(nickname, phone, password):
     }
     db.session.add(User(**user))
     db.session.commit()
+
 
 def get_user_by_phone(phone):
     return User.query.filter_by(phone=phone).first()

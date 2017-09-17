@@ -13,7 +13,7 @@ class User(Controller):
         if user_repo.is_nickname_used(nickname):
             return self.echo(102)
         try:
-            user_repo.add(nickname, phone, password)
+            user_repo.create(nickname, phone, password)
         except Exception:
             return self.echo(1)
         else:
