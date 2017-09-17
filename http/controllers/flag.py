@@ -39,3 +39,10 @@ class Flag(Controller):
         flag_repo.delete(flag)
 
         return self.echo(0)
+
+    def show(self, flag_id):
+        flag = flag_repo.get_flag_by_id(flag_id)
+        if not flag:
+            return self.echo(208)
+
+        return self.echo(0, flag.to_dict())

@@ -12,6 +12,10 @@ class BaseModel(db.Model):
     update_at = db.Column(db.DateTime, default=datetime.datetime.now, onupdate=datetime.datetime.now)
     delete_at = db.Column(db.DateTime)
 
+    def to_dict(self):
+        column_name_list = [value[0] for value in self._sa_instance_state.attrs.items()]
+        return dict((column_name, getattr(self, column_name, None)) for column_name in column_name_list)
+
 
 class User(BaseModel):
     id = db.Column(db.Integer, primary_key=True)
