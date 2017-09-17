@@ -6,6 +6,10 @@ from kernel.app import app
 db = SQLAlchemy(app)
 
 
+def models_to_matrix(models):
+    return [model.to_dict() for model in models]
+
+
 class BaseModel(db.Model):
     __abstract__ = True
     create_at = db.Column(db.DateTime, default=datetime.datetime.now)

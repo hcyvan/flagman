@@ -46,3 +46,10 @@ class Flag(Controller):
             return self.echo(208)
 
         return self.echo(0, flag.to_dict())
+
+    def index(self):
+        page = self.args_int('page')
+        per_page = self.args_int('per_page')
+
+        flags, pages, total = flag_repo.index(page, per_page)
+        return self.echo(0, {'data': flags, 'pages': pages, 'total': total, 'per_page': per_page, 'page': page})

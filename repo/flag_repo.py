@@ -1,4 +1,4 @@
-from model.db import Flag, db
+from model.db import Flag, db, models_to_matrix
 
 
 def create(title, content, address, people_number, start_time, lat, lng):
@@ -23,3 +23,8 @@ def delete(flag):
     db.session.delete(flag)
     db.session.commit()
 
+
+def index(page, per_page):
+    paginate = Flag.query.paginate(page, per_page, False)
+
+    return models_to_matrix(paginate.items), paginate.pages, paginate.total
