@@ -31,3 +31,11 @@ class Flag(Controller):
 
         return self.echo()
 
+    def delete(self, flag_id):
+        flag = flag_repo.get_flag_by_id(flag_id)
+        if not flag:
+            return self.echo(208)
+
+        flag_repo.delete(flag)
+
+        return self.echo(0)

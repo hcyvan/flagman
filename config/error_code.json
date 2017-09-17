@@ -11,5 +11,6 @@
   {"code": 204, "msg": "Flag people_number can't be empty"},
   {"code": 205, "msg": "Flag start_time can't be empty"},
   {"code": 206, "msg": "Flag lat can't be empty"},
-  {"code": 207, "msg": "Flag lng can't be empty"}
+  {"code": 207, "msg": "Flag lng can't be empty"},
+  {"code": 208, "msg": "Flag not exist"}
 ]
