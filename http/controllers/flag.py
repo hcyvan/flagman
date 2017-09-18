@@ -31,6 +31,22 @@ class Flag(Controller):
 
         return self.echo()
 
+    def update(self, flag_id):
+        title = self.json('title')
+        content = self.json('content')
+        address = self.json('address')
+        people_number = self.json('people_number')
+        start_time = self.json('start_time')
+        lat = self.json('lat')
+        lng = self.json('lng')
+
+        flag = flag_repo.get_flag_by_id(flag_id)
+        if not flag:
+            return self.echo(208)
+        flag_repo.update(flag, title, content, address, people_number, start_time, lat, lng)
+
+        return self.echo()
+
     def delete(self, flag_id):
         flag = flag_repo.get_flag_by_id(flag_id)
         if not flag:
@@ -53,3 +69,4 @@ class Flag(Controller):
 
         flags, pages, total = flag_repo.index(page, per_page)
         return self.echo(0, {'data': flags, 'pages': pages, 'total': total, 'per_page': per_page, 'page': page})
+

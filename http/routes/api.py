@@ -8,6 +8,6 @@ route.post('/login', 'User@login')
 # Flag
 route.post('/flags', 'Flag@create')
 route.delete('/flags/<flag_id>', 'Flag@delete')
-# route.put('/flags/:id', 'Flag@update')
+route.put('/flags/<flag_id>', 'Flag@update')
 route.get('/flags', 'Flag@index')
 route.get('/flags/<flag_id>', 'Flag@show')

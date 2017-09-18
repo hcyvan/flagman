@@ -15,6 +15,18 @@ def create(title, content, address, people_number, start_time, lat, lng):
     db.session.commit()
 
 
+def update(flag, title, content, address, people_number, start_time, lat, lng):
+    flag.update(**{
+        'title': title,
+        'content': content,
+        'address': address,
+        'people_number': people_number,
+        'start_time': start_time,
+        'lat': lat,
+        'lng': lng
+    })
+
+
 def get_flag_by_id(flag_id):
     return Flag.query.get(flag_id)
 
