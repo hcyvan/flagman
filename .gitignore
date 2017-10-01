@@ -3,3 +3,4 @@ venv/
 __pycache__/
 migrations/
 weixin/project.config.json
+.DS_Store

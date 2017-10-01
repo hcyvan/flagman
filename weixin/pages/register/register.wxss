@@ -1,0 +1,36 @@
+.logo {
+  width:200rpx;
+  height:200rpx;
+}
+
+.input-group {
+  flex-grow: 1;
+  overflow-x: hidden;
+  margin: 200rpx 0rpx 50rpx 0rpx;
+}
+
+.input-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  margin: 30rpx;
+  background-color: #fff;
+  font-size: 40rpx;
+}
+
+.input-section input {
+  transition: width 0.4s ease-in-out;
+  box-shadow: 1px 1px 2px #333333;
+  flex-flow: left;
+  margin-left: 30rpx;
+  height: 80rpx;
+}
+
+.input-section span {
+  color: #666;
+}
+
+#register-button {
+  width: 500rpx;
+}
