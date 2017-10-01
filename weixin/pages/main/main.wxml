@@ -1,0 +1,12 @@
+<view>
+ <map id="map"
+  longitude="{{location.longitude}}"
+  latitude="{{location.latitude}}"
+  scale="14" 
+  bindcontroltap="controltap" 
+  bindmarkertap="markertap" 
+  controls="{{controls}}"
+  markers="{{markers}}"
+  bindregionchange="regionchange">
+</map> 
+</view>
