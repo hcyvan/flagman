@@ -1,0 +1,7 @@
+.links {
+  margin-top: 100rpx;
+}
+
+.links navigator {
+  margin: 15rpx 0rpx;
+}

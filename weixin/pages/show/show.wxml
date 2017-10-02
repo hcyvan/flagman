@@ -1,0 +1,8 @@
+<view class="container">
+本页面仅用于展示目前所的页面
+  <view class="links">
+    <navigator url="/pages/main/main">主页面</navigator>
+    <navigator url="/pages/register/register">注册页面</navigator>
+    <navigator url="/pages/login/login">登陆页面</navigator>
+  </view>
+</view>
