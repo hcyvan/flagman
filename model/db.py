@@ -22,7 +22,6 @@ class BaseModel(db.Model):
                 if except_none and v is None:
                     continue
                 setattr(self, k, v)
-        print(kw)
         db.session.commit()
 
     def to_dict(self):
@@ -47,3 +46,5 @@ class Flag(BaseModel):
     start_time = db.Column(db.DateTime)
     lat = db.Column(db.Integer)
     lng = db.Column(db.Integer)
+
+class

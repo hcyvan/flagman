@@ -4,6 +4,13 @@
 ## 全部接口
 + POST /register       注册
 + POST /login          登陆
++ POST /flags           创建活动
++ GET /flags/<flag_id>   查看活动
++ GET /flags               查看活动列表
++ DELETE /flags/<flag_id>   删除活动
++ PATCH /flags/<flag_id>   更新活动
+
+
 
 
 ## 业务码
@@ -38,4 +45,6 @@ POST /login
 2. 返回值
 
         { "code":  0 }
+        
+    
 
