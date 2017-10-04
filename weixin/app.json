@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/show/show",
+    "pages/create-flag/create-flag",
     "pages/main/main",
     "pages/login/login",
     "pages/register/register",

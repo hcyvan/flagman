@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="flag-items">
+    <image class="icon" src="/images/location.png"></image>
+    <view wx:if="{{address}}">{{address}}</view>
+    <view wx:else class="placehoder" bindtap="chooseLocation">请选择活动地点</view>
+  </view>
+  <view class="flag-items">
+    <image class="icon" src="/images/calendar.png"></image>
+    <view>
+      <picker class="flag-sub-items" mode="date" value="{{flagDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view wx:if="{{flagDate}}" class="placehoder">{{flagDate}}</view>
+        <view wx:else class="placehoder">请选择活动日期</view>
+      </picker>
+      <picker class="flag-sub-items" mode="time" value="{{flagTime}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view wx:if="{{flagTime}}" class="placehoder">{{flagTime}}</view>
+        <view wx:else class="placehoder">请选择活动时间</view>
+      </picker>
+    </view>
+  </view>
+  <view class="flag-items flag-content">
+    <image class="icon" src="/images/document-content.png"></image>
+    <textarea/>
+  </view>
+  <view class="flag-items">
+    <image class="icon" src="/images/arroba.png"></image><input/>
+  </view>
+  <view class="flag-items flag-message">
+    <image class="icon" src="/images/paper-plane.png"></image>
+  </view>
+</view>

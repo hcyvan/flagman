@@ -1,0 +1,47 @@
+page {
+  background-color: #F8F8F8;
+    height: 100%;  
+   overflow-y: scroll;
+}
+.container {
+  padding: 50rpx 0;
+}
+.flag-items {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFF;
+  margin: 10rpx 0rpx;
+  flex-shrink: 0;
+}
+
+.flag-items.flag-content{
+    align-items: flex-start;
+}
+
+.flag-items.flag-message{
+    align-items: flex-start;
+    height: 100%;
+    /* flex-grow: 1; */
+}
+
+.flag-items input {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.flag-sub-items {
+  margin: 15rpx 0rpx;
+}
+
+.icon {
+  margin: 0 60rpx 0 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.placehoder {
+  color: #666;
+}
