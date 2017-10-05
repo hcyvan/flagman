@@ -19,6 +19,13 @@ class User(Controller):
         else:
             return self.echo()
 
+    def hello(self):
+        word = self.args('word')
+        if word:
+            return word
+        else:
+            return 'hello'
+
     def login(self):
         phone = self.json('phone')
         password = self.json('password')
@@ -32,4 +39,3 @@ class User(Controller):
             return self.echo()
         else:
             return self.echo(104)
-

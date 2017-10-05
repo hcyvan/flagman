@@ -3,6 +3,7 @@ from kernel import route
 # User
 route.post('/register', 'User@register')
 route.post('/login', 'User@login')
+route.get('/hello', 'User@hello')
 
 
 # Flag

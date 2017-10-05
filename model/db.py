@@ -46,5 +46,3 @@ class Flag(BaseModel):
     start_time = db.Column(db.DateTime)
     lat = db.Column(db.Integer)
     lng = db.Column(db.Integer)
-
-class
