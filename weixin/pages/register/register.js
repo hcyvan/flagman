@@ -1,4 +1,5 @@
-// pages/register/register.js
+const request = require('../../utils/request')
+
 Page({
 
   /**
@@ -13,6 +14,20 @@ Page({
    */
   onLoad: function (options) {
   
+  },
+
+  formSubmit: function (e) {
+    let values = e.detail.value
+    let phoneNum = values.phone
+    let password = values.password
+    let passwordConfirmed = values.password2
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    request.post('/register', {}).then(res=>{
+      console.log(res)
+    })
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
   },
 
   /**

@@ -32,7 +32,9 @@ POST /register
 
 2. 返回值
 
-        { "code":  0 }
+        { 
+            "code":  0
+        }
 
 ### 登陆
 POST /login
@@ -44,7 +46,14 @@ POST /login
 
 2. 返回值
 
-        { "code":  0 }
+        {
+            "code":  0
+        }
         
-    
+### 创建活动
+POST /flags
+
+1.参数
++ title (Y) 活动名称
++ content (Y) 活动地点
 

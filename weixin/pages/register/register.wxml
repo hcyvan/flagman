@@ -1,15 +1,17 @@
 <view class="container">
-  <image class="logo" src="/images/flagdog_to_replace.png"></image> 
-  <view class="input-group">
-    <view class="input-section">
-      <span>手机</span><input/>
+  <image class="logo" src="/images/flagdog_to_replace.png"></image>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="input-group">
+      <view class="input-section">
+        <span>手机</span><input name="phone"/>
+      </view>
+      <view class="input-section">
+        <span>密码</span><input name="password" password/>
+      </view>
+      <view class="input-section">
+        <span>确认密码</span><input name="password2" password/>
+      </view>
     </view>
-    <view class="input-section">
-      <span>密码</span><input password/>
-    </view>
-    <view class="input-section">
-      <span>确认密码</span><input password/>
-    </view>
-  </view>
-  <button size="default" id='register-button'>注册</button>
+    <button formType="submit" size="default" id='register-button'>注册</button>
+  </form>
 </view>

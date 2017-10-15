@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/register/register",        
     "pages/show/show",
     "pages/create-flag/create-flag",
     "pages/main/main",
     "pages/login/login",
-    "pages/register/register",
     "pages/index/index",
     "pages/logs/logs"
   ],
